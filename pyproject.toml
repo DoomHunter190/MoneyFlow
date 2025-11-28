@@ -21,6 +21,8 @@ plotly = "^5.24"
 ruff = "^0.9"
 black = "^24.0"
 mypy = "^1.13"
+psycopg = {extras = ["binary"], version = "^3.2.13"}
+psycopg2-binary = "^2.9.11"
 
 [build-system]
 requires = ["poetry-core"]
