@@ -1,4 +1,3 @@
-# moneyflow/config.py
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Literal
 
