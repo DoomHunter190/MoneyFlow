@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "moneyflow"
+version = "0.1.0"
+description = "Личный финансовый центр: умные покупки, подписки и учёт автомобиля"
+authors = ["Твоё Имя <ты@mail.ru>"]
+license = "Apache-2.0"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flet = "^0.24"
+sqlalchemy = {version = "^2.0", extras = ["asyncio"]}
+asyncpg = "^0.30"
+alembic = "^1.14"
+pydantic = "^2.9"
+pydantic-settings = "^2.5"
+plotly = "^5.24"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9"
+black = "^24.0"
+mypy = "^1.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
