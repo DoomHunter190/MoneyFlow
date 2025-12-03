@@ -2,10 +2,15 @@
 name = "moneyflow"
 version = "0.1.0"
 description = "Личный финансовый центр: умные покупки, подписки и учёт автомобиля"
-authors = ["Твоё Имя <ты@mail.ru>"]
+authors = ["doomhunter <maximportnov9999@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
-package-mode = false
+package-mode = true
+
+[[tool.poetry.packages]]
+include = "moneyflow"
+from = "src"
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -27,3 +32,9 @@ psycopg2-binary = "^2.9.11"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+db-up = "scripts.db:up"
+db-down = "scripts.db:down"
+db-restart = "scripts.db:restart"
+run = "scripts.app:start"
