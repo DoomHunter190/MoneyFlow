@@ -1,10 +1,14 @@
+import os
+import sys
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from alembic import context
-from moneyflow.config import settings
-from src.models.base import Base
 
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from src.moneyflow.models import Base
+from src.moneyflow.config import settings
 
 config = context.config
 config.set_main_option("sqlalchemy.url", str(settings.database_url))
