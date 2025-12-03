@@ -6,6 +6,7 @@ from moneyflow.ui.purchases import PurchasesView
 from moneyflow.ui.subscriptions import SubscriptionsView
 from moneyflow.ui.car import CarView
 from moneyflow.ui.settings import SettingsView
+from moneyflow.ui.products import ProductsView
 
 
 
@@ -25,9 +26,10 @@ def main(page: ft.Page):
             controls=[
                 ft.IconButton(icon=ft.icons.HOME, selected=True, on_click=lambda e: change_tab(0)),
                 ft.IconButton(icon=ft.icons.SHOPPING_CART, selected=False, on_click=lambda e: change_tab(1)),
-                ft.IconButton(icon=ft.icons.SUBSCRIPTIONS, selected=False, on_click=lambda e: change_tab(2)),
-                ft.IconButton(icon=ft.icons.DIRECTIONS_CAR, selected=False, on_click=lambda e: change_tab(3)),
-                ft.IconButton(icon=ft.icons.SETTINGS, selected=False, on_click=lambda e: change_tab(4)),
+                ft.IconButton(icon=ft.icons.STORE_MALL_DIRECTORY, selected=False, on_click=lambda e: change_tab(2)),
+                ft.IconButton(icon=ft.icons.SUBSCRIPTIONS, selected=False, on_click=lambda e: change_tab(3)),
+                ft.IconButton(icon=ft.icons.DIRECTIONS_CAR, selected=False, on_click=lambda e: change_tab(4)),
+                ft.IconButton(icon=ft.icons.SETTINGS, selected=False, on_click=lambda e: change_tab(5)),
             ],
         ),
     )
@@ -36,6 +38,7 @@ def main(page: ft.Page):
     views = [
         DashboardView(page),
         PurchasesView(page),
+        ProductsView(page),
         SubscriptionsView(page),
         CarView(page),
         SettingsView(page),
